@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Assignment 2">
+<meta name="keywords" content="F45, F45 Singapore, Assignment, Basic HTML, Basic CSS">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+
+  body{
+    margin: 0;
+    background-color: white;
+  }
+
+/*Sticky for navigation bar*/
+  div.sticky {
+    position: sticky;
+    top: 0;
+  }
+
+/*Navigation bar*/
+  ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: -2px;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: Lucida Bright;
+  }
+
+  li a:hover {
+    background-color: #808080;
+  }
+
+  * {
+  box-sizing: border-box;
+}
+
+/*Background video*/
+#myVideo {
+  position: relative;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  background-size: cover;
+   -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+  }
+
+.content {
+  position: fixed;
+  bottom: 0;
+  max-height: 20%;
+  background: black;
+  overflow: hidden;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0px;
+  z-index: -2;
+}
+
+/*F45 logo overlay*/
+.overlay {
+  position: absolute;
+  top: 35%;
+  left: 32%;
+  width: 35%;
+  height: 50%;
+}
+.overlay img{
+  position:absolute;
+  left:0;top:0;
+  width:50%;
+  height:60%;
+  object-fit:cover;
+  pointer-events:none;
+  z-index:2;
+}
+
+/*F45 logo in nav bar*/
+.resize {
+  width: 100px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+/*Flex containers*/
+.flex-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.flex-container > div {
+width:100%;
+text-align: center;
+background: rgba(255, 255, 255, 0.8);
+font-size: 20px;
+color: white;
+}
+
+/*Smaller containers*/
+.block {
+  width: 50%;
+  height: 200px;
+  background-color: white;
+  margin-left: 500px;
+  margin-top: -20px;
+}
+
+.container {
+  text-align: left;
+}
+
+.block img {
+ width: 400px;
+ height: 200px;
+ float: left;
+}
+
+/*CSS for the headers*/
+.header {
+  font-family: Lucida Bright;
+  font-size: 80px;
+  color: #211551;
+  margin-bottom: 50px;
+}
+
+/*CSS for the paragraphs*/
+p {
+  font-size: 30px;
+  font-family: Lucida Bright;
+  margin-top: 2%;
+  color: #211551;
+}
+
+/*Footer CSS*/
+footer {
+  text-align: center;
+  padding: 0px;
+  background: white;
+  width: 100%;
+  height: 460px;
+}
+
+/*Footer social media buttons*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+  </style>
+</head>
+
+<body>
+<!--F45 color theme design above navigation bar-->
+  <img src="banner.jpg" alt="image" width="100%" height="20px" margin="0" position="absolute">
+
+  <!--Navigation bar with sticky-->
+  <div class="sticky" style="z-index:2;">
+    <ul>
+      <li><center><img src="f45navbarlogo.png" alt="F45 Logo" class="resize" width="100%"></center></li>
+        <li><a class="active" href="index.html"><b>Why F45?</b></a></li>
+        <li><a href="team.html"><b>F45 Team</b></a></li>
+      <li><a href="findus.html"><b>Find Us</b></a></li>
+    </ul>
+  </div>
+
+<!--Background video-->
+<div class="myVideo" style="z-index:1;">
+  <video autoplay muted loop id="myVideo">
+    <source src="backgroundvid.mp4" width=100%; type="video/mp4">
+      Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<!--Background video logo overlay-->
+<img src="logo.png" alt='F45 Logo' class="overlay">
+
+<!--Banner image bar for aesthetics-->
+<img src="banner.jpg" alt="image" width="100%" height="20px" margin="0" position="absolute">
+
+<!--First flex container-->
+<div class="flex-container">
+  <div>
+    <img src="first.png" width="50%" height="20%" alt="F45 Class" style="float:left;">
+      <header class="header" style="padding-top:4%;"><b>What is F45?</b></header>
+      <hr>
+      <p>The F stands for functional training,
+        <br>
+        a mix of circuit and HIIT style workouts geared towards everyday movement.
+        <br>
+        <br>
+        45 is the total amount of time for sweat-dripping, heart-pumping fun.
+        <br>
+      </p>
+    </div>
+
+<!--Banner image for aesthetics-->
+<img src="banner.jpg" alt="Banner" width="100%" height="20px" margin="0" position="absolute">
+<img src="third.jpg" alt="F45 Class" width="100%" height="60%" margin="0" position="absolute">
+<img src="banner.jpg" alt="Banner" width="100%" height="20px" margin="0" position="absolute">
+
+<!--Second flex container-->
+<div class="flex-container">
+  <div>
+    <img src="second.png" width="60%" height="20%" alt="F45 Class" style="float:right;">
+    <header class="header" style="padding-top:4%;"><b>Why F45?</b></header>
+    <hr>
+    <h1 style="color:#211551;font-size:40px">
+      INNOVATION. MOTIVATION. RESULTS.</h1>
+      <p>F45 Training workouts are designed to unify the
+        <br>
+        muscle groups of the body and
+        to make you look,
+        <br>
+        move and perform better in all aspects of your life.
+        <br>
+      </p>
+    </div>
+
+<!--Banner image for aesthetics-->
+<img src="banner.jpg" alt="image" width="100%" height="20px" margin="0" position="absolute">
+<img src="fourth.jpg" alt="F45 Class" width="100%" height="850px" margin="0" position="absolute">
+<img src="banner.jpg" alt="image" width="100%" height="20px" margin="0" position="absolute">
+
+<!--Smaller container blocks-->
+<header class="header" style="padding-top:4%;"><b>Choose. Your. Class.</b></header>
+  <br>
+  <div class="container">
+    <div class="block">
+      <img src="class1.png">
+      <p>Specifically designed to provide a functional full-body workout
+        while improving energy levels, metabolic rate, strength, and endurance.</p>
+      </div>
+      <div style="background-color: #D6001C; width: 50%; height: 0.5vh; margin-left: 500px;"></div>
+      <br>
+      <br>
+      <div class="block">
+        <img src="class2.png">
+        <p>Transform members lifestyle
+          physically and mentally while encouraging community growth and a no-ego attitude.</p>
+        </div>
+        <div style="background-color: #D6001C; width: 50%; height: 0.5vh; margin-left: 500px;"></div>
+        <br>
+        <br>
+        <div class="block">
+          <img src="class3.png">
+          <p>Most time-efficient ways of training. We aim to burn up
+            to 750 calories per 45-minute session.</p>
+          </div>
+          <div style="background-color: #D6001C; width: 50%; height: 0.5vh; margin-left: 500px;"></div>
+        </div>
+        <br>
+
+<!--Footer stuff-->
+<footer>
+    <header class="header" style="padding-top:4%;"><b>TEAM TRAINING. LIFE CHANGING.</b></header>
+    <p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us: <u>+65 9363 6433</u> | Email: <u>admin@f45training.com</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://f45challenge.com/get-the-app/" target="_blank">F45 APP</a> | <a href="https://f45training.com/faqs/" target="_blank">FAQ</a> | <a href="https://f45training.com/privacy/" target="_blank">PRIVACY</a> |  <a href="https://f45training.com/terms/" target="_blank">TERMS</a>
+    </p>
+    <div style="background-color: #121212; width: 80%; height: 0.3vh; margin-left: 200px;"></div>
+    <br>
+
+<!--Footer social media buttons-->
+  <a href="https://www.facebook.com/F45FunctionalTraining" target="_blank" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/F45TRAINING" target="_blank" class="fa fa-twitter"></a>
+  <a href="https://www.youtube.com/user/F45Training" target="_blank" class="fa fa-youtube"></a>
+  <a href="https://www.instagram.com/f45_training/" target="_blank" class="fa fa-instagram"></a>
+</footer>
+
+</body>
+</html>
